@@ -1,0 +1,1 @@
+print((lambda x, d, fib: fib(x, d, fib))(1_000, {1: 1, 2: 1}, (lambda x, d, self: (d[x] if x in d else d.setdefault(x - 1, self(x - 1, d, self))) + (d[x] if x in d else d.setdefault(x - 2, self(x - 2, d, self))))))
